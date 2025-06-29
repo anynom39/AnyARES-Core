@@ -3,8 +3,6 @@ AnyARES (Advanced Regional Editing Suite)
 ![alt text](https://placehold.co/800x200/2c2c2c/e0e0e0/png?text=AnyARES)
 
 
-(Feel free to replace the placeholder banner with a cool logo or screenshot!)
-
 AnyARES is a modern, high-performance, asynchronous world editing suite for PaperMC servers, built from the ground up for performance and extensibility.
 
 Inspired by giants like WorldEdit and FAWE, AnyARES aims to provide server administrators and advanced builders with a powerful, intuitive, and lag-free toolset for large-scale region manipulation. Its core philosophy is based on a lean, powerful core plugin and a rich ecosystem of optional addon plugins, allowing server owners to install only the features they need.
