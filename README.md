@@ -7,6 +7,20 @@ AnyARES is a modern, high-performance, asynchronous world editing suite for Pape
 
 Inspired by giants like WorldEdit and FAWE, AnyARES aims to provide server administrators and advanced builders with a powerful, intuitive, and lag-free toolset for large-scale region manipulation. Its core philosophy is based on a lean, powerful core plugin and a rich ecosystem of optional addon plugins, allowing server owners to install only the features they need.
 
+# Server Requirements
+
+### Server Software
+
+**Paper** (or a downstream fork like Purpur). Spigot is **not** supported due to the plugin's reliance on Paper's advanced asynchronous APIs for performance.
+
+### Minecraft Version
+
+**1.21.x**. The plugin is built against the 1.21 API and will not work on older versions like 1.20.x. It is always recommended to use the latest version of Paper for the corresponding Minecraft release.
+
+### Java Version
+
+**Java 21**. This is a requirement for Minecraft 1.21+ itself, so if your server is running, you already meet this requirement.
+
 # ✨ Core Features
 
 The AnyARES-Core plugin provides the essential foundation for all world editing tasks.
