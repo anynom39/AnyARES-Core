@@ -1,0 +1,26 @@
+# AnyARES-Core Configuration
+
+core-settings:
+  # Item used for the selection wand. Case-insensitive Material name.
+  # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+  wand-item: "WOODEN_AXE"
+
+  history:
+    # Maximum number of operations to store in a player's undo/redo history.
+    max-size: 50
+
+  # Settings for the TaskEngine (async operations)
+  task-engine:
+    # Maximum number of block operations that can be processed concurrently.
+    # Note: Each operation might itself use multiple region-based tasks.
+    # This is more about how many "user commands" run at once.
+    max-concurrent-operations: 1 # Keep this low initially, e.g., 1 or 2
+
+  # Selection visualization settings (placeholders for now)
+  visualization:
+    enabled: true
+    # particle-type: "FLAME" # This line is now ignored, but can be kept for user info
+    refresh-interval-ticks: 10
+    max-view-distance: 64
+    particle-density: 0.5 # Density of particles along edges
+    # pos1-color, pos2-color, edge-color sections are no longer used

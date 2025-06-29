@@ -1,0 +1,123 @@
+name: ${project.name}
+version: ${project.version}
+main: com.anynom39.anyares.AnyARES_Core
+api-version: '1.21'
+author: anynom39
+description: ${project.description}
+
+commands:
+  anyares:
+    description: Base command for AnyARES Core functions and information.
+    aliases: [ ares, aacore ]
+    permission: anyares.core.base
+    usage: /<command> [subcommand] [args...]
+
+  wand:
+    description: Gives the AnyARES selection wand.
+    aliases: [ /wand ]
+    permission: anyares.selection.wand.get
+    usage: /<command>
+  pos1:
+    description: Sets selection position 1 to your current location or pointed block.
+    aliases: [ /pos1 ]
+    permission: anyares.selection.pos
+    usage: /<command> [x y z]
+  pos2:
+    description: Sets selection position 2 to your current location or pointed block.
+    aliases: [ /pos2 ]
+    permission: anyares.selection.pos
+    usage: /<command> [x y z]
+
+  undo:
+    description: Undoes your last AnyARES operation.
+    aliases: [ /undo ]
+    permission: anyares.history.undo
+    usage: /<command> [count]
+  redo:
+    description: Redoes your last undone AnyARES operation.
+    aliases: [ /redo ]
+    permission: anyares.history.redo
+    usage: /<command> [count]
+
+  set:
+    description: Sets all blocks in the selection to a specified block type or pattern.
+    aliases: [ /set ]
+    permission: anyares.operation.set
+    usage: /<command> <block_material_or_pattern>
+
+  copy:
+    description: Copies the current selection to your clipboard.
+    aliases: [ /copy ]
+    permission: anyares.clipboard.copy
+    usage: /<command>
+  cut:
+    description: Cuts the current selection to your clipboard (copies then sets to air).
+    aliases: [ /cut ]
+    permission: anyares.clipboard.cut
+    usage: /<command>
+  paste:
+    description: Pastes your clipboard content at your current position.
+    aliases: [ /paste ]
+    permission: anyares.clipboard.paste
+    usage: /<command> [-a]
+  replace:
+    description: Replaces blocks matching a pattern with another pattern in the selection.
+    aliases: [ /replace ]
+    permission: anyares.operation.replace
+    usage: /<command> <from_pattern> <to_pattern>
+  replacenear:
+    description: Replaces blocks near you within a radius.
+    aliases: [ /replacenear ]
+    permission: anyares.operation.replacenear
+    usage: /<command> <radius> <from_pattern> <to_pattern>
+
+
+permissions:
+  anyares.core.base:
+    description: Allows basic usage of the /anyares command for information.
+    default: true
+  anyares.core.admin:
+    description: Allows admin control over AnyARES Core (e.g., reload).
+    default: op
+  anyares.selection.wand:
+    description: Allows usage of the selection wand item.
+    default: op
+  anyares.selection.wand.get:
+    description: Allows players to get the selection wand via the /wand command.
+    default: op
+  anyares.selection.pos:
+    description: Allows setting selection positions via /pos1 and /pos2 commands.
+    default: op
+  anyares.history.undo:
+    description: Allows undoing operations.
+    default: op
+  anyares.history.redo:
+    description: Allows redoing operations.
+    default: op
+  anyares.history.manage:
+    description: Allows managing player history.
+    default: op
+  anyares.queue.manage:
+    description: Allows managing the operation queue.
+    default: op
+  anyares.operation.set:
+    description: Allows usage of the /set command.
+    default: op
+  anyares.clipboard.copy:
+    description: Allows usage of the /copy command.
+    default: op
+  anyares.clipboard.cut:
+    description: Allows usage of the /cut command.
+    default: op
+  anyares.clipboard.paste:
+    description: Allows usage of the /paste command.
+    default: op
+  anyares.operation.replace:
+    description: Allows usage of the /replace command.
+    default: op
+  anyares.operation.replacenear:
+    description: Allows usage of the /replacenear command.
+    default: op
+  anyares.core.status:
+    description: Allows viewing the plugin status via /anyares status.
+    default: op
